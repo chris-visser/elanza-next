@@ -60,7 +60,6 @@ export default function CareRequest() {
                     </label>
                     <select
                         id="kindOfCare"
-                        defaultValue="household"
                         {...register('kindOfCare')}
                         className="w-full py-2 px-3 border border-gray-400 rounded-md"
                     >
@@ -79,7 +78,6 @@ export default function CareRequest() {
                     <input
                         type="datetime-local"
                         id="startsAt"
-                        defaultValue="2023-07-04T08:00"
                         {...register('startsAt')}
                         className="w-full py-2 px-3 border border-gray-400 rounded-md"
                     />
@@ -94,7 +92,6 @@ export default function CareRequest() {
                     <input
                         type="datetime-local"
                         id="endsAt"
-                        defaultValue="2023-07-04T09:00"
                         {...register('endsAt')}
                         className="w-full py-2 px-3 border border-gray-400 rounded-md"
                     />
@@ -110,7 +107,6 @@ export default function CareRequest() {
                     <input
                         type="text"
                         id="clientName"
-                        defaultValue="Chris Visser"
                         {...register('clientName')}
                         className="w-full py-2 px-3 border border-gray-400 rounded-md"
                     />
@@ -125,7 +121,6 @@ export default function CareRequest() {
                     </label>
                     <textarea
                         id="extraInformation"
-                        defaultValue="Wow this works!"
                         {...register('extraInformation')}
                         className="w-full py-2 px-3 border border-gray-400 rounded-md"
                     />
