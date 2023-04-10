@@ -22,14 +22,13 @@ export const CareRequestItem: React.FC<CareRequestRecord> = ({
             <time dateTime={startsAt} className="font-bold">
                 {toDateTime(startsAt)} - {toTime(endsAt)}
             </time>
-
         </p>
 
         <h3 className=" text-neutral-700 mb-2">
             <strong className="bold">{kindsOfCare[kindOfCare]}</strong> for {clientName}
         </h3>
         <Link href={`/care-requests/${id}`} className="text-blue-500 hover:underline absolute inset-0">
-            <span className="absolute right-2 bottom-2">Details</span>
+            <span className="absolute right-6 bottom-6">Details</span>
         </Link>
     </li>
 )

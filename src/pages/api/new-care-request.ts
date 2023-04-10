@@ -1,5 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { nanoid } from 'nanoid'
 import { CareRequestSchema, CareRequestData  } from '~/schemas/CareRequestSchema'
 
 import { careRequests } from '~/data/careRequests'
@@ -9,12 +10,13 @@ export default function handler(
   res: NextApiResponse<CareRequestData | { error: string }>
 ) {
 
-  console.log(req.method, req.body)
-
   try {
     const info = CareRequestSchema.parse(req.body)
 
-    careRequests.push(info)
+    careRequests.push({
+      id: nanoid(),
+      ...info
+    })
 
     res.status(201).json(info)
     // Not sure how to type. should be ApiError
