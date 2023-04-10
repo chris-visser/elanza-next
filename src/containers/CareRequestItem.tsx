@@ -28,5 +28,8 @@ export const CareRequestItem: React.FC<CareRequestRecord> = ({
         <h3 className=" text-neutral-700 mb-2">
             <strong className="bold">{kindsOfCare[kindOfCare]}</strong> for {clientName}
         </h3>
+        <Link href={`/care-requests/${id}`} className="text-blue-500 hover:underline absolute inset-0">
+            <span className="absolute right-2 bottom-2">Details</span>
+        </Link>
     </li>
 )
